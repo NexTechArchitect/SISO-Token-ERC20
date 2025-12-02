@@ -1,0 +1,42 @@
+name: SISO Token – Foundry CI
+
+on:
+  push:
+    branches: ["master", "main"]
+  pull_request:
+    branches: ["master", "main"]
+
+jobs:
+  build-and-test:
+    name: Run Foundry Tests & Checks
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Install Foundry
+        uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: nightly
+
+      - name: Verify Foundry Version
+        run: forge --version
+
+      - name: Run Forge Format Check
+        run: forge fmt --check
+
+      - name: Install Dependencies (OpenZeppelin etc.)
+        run: forge install --no-commit
+
+      - name: Run Unit Tests
+        run: forge test -vvv
+
+      - name: Generate Coverage Report
+        run: forge coverage --report lcov
+
+      - name: Upload Coverage Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: coverage-report
+          path: lcov.info

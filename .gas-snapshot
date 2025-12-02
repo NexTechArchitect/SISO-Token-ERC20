@@ -1,0 +1,8 @@
+SisoTokenFullTest:testApproveAndTransferFrom() (gas: 68136)
+SisoTokenFullTest:testBurnReducesSupplyAndBalance() (gas: 31397)
+SisoTokenFullTest:testInitialSupplyAssignedToDeployerAndDistributed() (gas: 14433)
+SisoTokenFullTest:testMassTransfersRoundRobin() (gas: 173170)
+SisoTokenFullTest:testSimpleTransferBetweenUsers() (gas: 35217)
+SisoTokenFullTest:testUsersReceivedDistribution() (gas: 69377)
+SisoTokenFullTest:test_RevertWhen_TransferFromWithoutAllowance() (gas: 19821)
+SisoTokenFullTest:test_RevertWhen_TransferMoreThanBalance() (gas: 21673)
