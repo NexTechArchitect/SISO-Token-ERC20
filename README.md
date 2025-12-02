@@ -77,5 +77,5 @@ MIT License
 Author
 
 NEXTECHARHITECT
-Smart Contract Developer — ERC20, Web3, and Solidity engineering.
+(Smart Contract Developer — ERC20, Web3, and Solidity engineering.)
 
