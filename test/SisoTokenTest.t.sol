@@ -4,7 +4,7 @@ pragma solidity ^0.8.19;
 import {Test} from "forge-std/Test.sol";
 import {SisoToken} from "../src/SisoToken.sol";
 
-contract SisoTokenFullTest is Test {
+contract SisoTokenTest is Test {
     SisoToken public token;
 
     address[] public users;
