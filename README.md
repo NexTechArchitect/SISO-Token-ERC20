@@ -15,13 +15,14 @@ Initial Supply: 250,000,000 SISO
 
 Features:-
 
-Minting (owner-controlled)
-Burning
-Pausable transfers
-Allowance management
-Secure ownership pattern
-Comprehensive Foundry test suite
-Deployment and interaction scripts (deploy, mint, burn, pause, unpause, allowance)
+Minting (owner-controlled),   
+Burning, 
+Pausable,  transfers, 
+Allowance management, 
+Secure ownership pattern, 
+Comprehensive Foundry test suite,
+
+(Deployment and interaction scripts (deploy, mint, burn, pause, unpause, allowance))
 
 Project Structure:-
 
@@ -59,19 +60,18 @@ forge coverage
 
 Each main action has its own executable script:
 
-Deploy token
-Mint tokens
-Burn tokens
-Pause contract
-Unpause contract
-Set allowance
+Deploy token,
+Mint tokens, 
+Burn tokens, 
+Pause contract, 
+Unpause contract, 
+Set allowance 
 
 Run any script with:
 
 forge script <script-path> --rpc-url $SEPOLIA_RPC_URL --private-key $PRIVATE_KEY --broadcast
 
-License:-
-
+License:- 
 MIT License
 
 Author
