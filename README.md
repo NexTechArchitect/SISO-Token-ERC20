@@ -6,11 +6,16 @@ The project includes deployment scripts, minting and burning utilities, pausing 
 
 Contract Information:-
 
-Network: Sepolia
+Network: Sepolia 
+
 Contract Address: 0xc8C711CDf3fD162b00F3447C6963C52aF3d44AAb
+
 Standard: ERC-20
+
 Name: SISO Token
+
 Symbol: SISO
+
 Initial Supply: 250,000,000 SISO
 
 Features:-
