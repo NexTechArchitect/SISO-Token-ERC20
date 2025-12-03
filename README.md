@@ -102,12 +102,12 @@ The token inherits from OpenZeppelin’s audited contracts and supports:
 
 • Secure ownership pattern based on OpenZeppelin’s Ownable module
 
-The implementation avoids unnecessary abstractions so developers can trace the full token lifecycle — creation, distribution, modification, and administrative control — directly from the code.
+The implementation avoids unnecessary abstractions so developers can trace the full token lifecycle  creation, distribution, modification, and administrative control  directly from the code.
 
 Functional Overview:-
 
 The contract exposes a full ERC-20 interface with several operational controls.
-Minting is restricted to the owner and is used to gradually increase circulating supply toward the defined one-billion token cap. Burning allows any holder to permanently destroy tokens from their balance, enabling supply-side correction or deflationary logic. The contract includes pause and unpause capabilities which temporarily disable transfers and allowance-based operations, allowing safe handling during unexpected events or administrative procedures. All standard transfer and allowance behavior is fully implemented, including approve, increase/decrease allowance, and transferFrom mechanics.
+Minting is restricted to the owner and is used to gradually increase circulating supply toward the defined one-billion token cap. Burning allows any holder to permanently destroy tokens from their balance, enabling supply side correction or deflationary logic. The contract includes pause and unpause capabilities which temporarily disable transfers and allowance-based operations, allowing safe handling during unexpected events or administrative procedures. All standard transfer and allowance behavior is fully implemented, including approve, increase/decrease allowance, and transferFrom mechanics.
 
 The scripting layer provides automated control over the entire lifecycle of the token.
 A deployment script creates the initial supply and publishes the contract.
@@ -116,7 +116,7 @@ A burning script reduces supply from owner-held balances.
 Pause and unpause scripts allow immediate administrative intervention.
 A dedicated allowance script configures authorized spenders and sets controlled allowances for them.
 
-All core flows including direct transfers, delegated transfers, approval workflows, paused-state protections, burn operations, minting authority restrictions, and owner-only access controls—are validated through a complete Foundry test suite.
+All core flows including direct transfers, delegated transfers, approval workflows, paused-state protections, burn operations, minting authority restrictions, and owner-only access controls are validated through a complete Foundry test suite.
 
 Run any script using this format:
 
