@@ -25,7 +25,7 @@ Initial Minted Supply: 250,000,000 SISO
 
 Burned Supply: 250,000,000 SISO
 
-Current Remaining Supply: 500,000,000 SISO
+Current Remaining Supply: 750,000,000 SISO
 
 Contract Address:0xc8C711CDf3fD162b00F3447C6963C52aF3d44AAb
 
