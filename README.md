@@ -50,7 +50,7 @@ Modular project architecture
 Production-ready Foundry scripts
 
 
-Project Structure
+Structure of Project:-
 
 src/
 
