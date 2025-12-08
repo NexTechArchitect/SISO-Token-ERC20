@@ -34,9 +34,9 @@ Features:-
 
 The SISO Token contract includes the essential and commonly used ERC-20 extensions:
 
-Owner-controlled minting
+Owner-controlled minting so,Only owner have control in minting.
 
-Token burning
+Token burning for permanently burn the Token from Supply.
 
 Pausable token transfers
 
@@ -90,17 +90,17 @@ Contract Capabilities:-
 
 The token inherits from OpenZeppelin’s audited contracts and supports:
 
-• Owner-restricted minting for controlled supply expansion
+• Owner-restricted minting for controlled supply expansion.
 
-• Token burning for permanent supply reduction
+• Token burning for permanent supply reduction.
 
-• Transfer logic following the ERC-20 specification
+• Transfer logic following the ERC-20 specification.
 
-• Allowance management enabling delegated transfers
+• Allowance management enabling delegated transfers.
 
-• Pausing and unpausing of all token transfers via owner authority
+• Pausing and unpausing of all token transfers via owner authority.
 
-• Secure ownership pattern based on OpenZeppelin’s Ownable module
+• Secure ownership pattern based on OpenZeppelin’s Ownable module.
 
 The implementation avoids unnecessary abstractions so developers can trace the full token lifecycle  creation, distribution, modification, and administrative control  directly from the code.
 
