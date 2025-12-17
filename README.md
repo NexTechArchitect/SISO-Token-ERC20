@@ -1,96 +1,59 @@
 <div align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&duration=3000&pause=1000&color=007AFF&center=true&vCenter=true&width=500&lines=SISO+Token+(ERC-20);Engineered+with+Foundry;Secure+%7C+Scalable+%7C+Modular" alt="Typing Effect" />
 
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=40&duration=3000&pause=1000&color=007AFF&center=true&vCenter=true&width=700&lines=SISO+Token+(ERC-20);Production-Grade+DeFi+Standard;Powered+by+Foundry+%26+OpenZeppelin" alt="Typing Effect" />
+  <br/>
 
+  <img src="https://img.shields.io/badge/Network-Sepolia-FF4500?style=for-the-badge&logo=ethereum&logoColor=white" />
+  <img src="https://img.shields.io/badge/Standard-ERC20-363636?style=for-the-badge&logo=solidity&logoColor=white" />
+  <img src="https://img.shields.io/badge/Built_With-Foundry-BE5212?style=for-the-badge&logo=foundry&logoColor=white" />
+  
   <br/>
   
-  <img src="https://img.shields.io/badge/Network-Sepolia_Testnet-FF4500?style=for-the-badge&logo=ethereum&logoColor=white" />
-  <img src="https://img.shields.io/badge/Standard-ERC--20-363636?style=for-the-badge&logo=solidity&logoColor=white" />
-  <img src="https://img.shields.io/badge/Security-Pausable_%7C_Ownable-0052FF?style=for-the-badge&logo=security-scorecard&logoColor=white" />
-  <br/>
-  <img src="https://img.shields.io/badge/Built_With-Foundry-BE5212?style=flat-square&logo=foundry&logoColor=white" />
-  <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" />
-
-</div>
-
----
-
-<div align="center"> 
-  <h3>🚀 Production-Ready Token Engineering</h3>
   <p>
-    <b>SISO Token</b> is a secure, clean, and modular <b>ERC-20 implementation</b> designed for real-world reliability. <br/>
-    Built using <b>OpenZeppelin</b> standards and the <b>Foundry</b> development framework, it features a complete lifecycle management suite: <br/>
-    <i>Minting, Burning, Pausing, and Automated Testing.</i>
+    <b>A production-grade, paused-enabled, and burn-ready ERC-20 implementation.</b>
   </p>
-  
-  <a href="#-contract-information">View Contract</a> • 
-  <a href="#-features">Key Features</a> • 
-  <a href="#-installation--testing">Deploy & Test</a>
+
+  <a href="#-contract-details"><strong>Contract Details</strong></a> •
+  <a href="#-architecture"><strong>Architecture</strong></a> •
+  <a href="#-installation--testing"><strong>Deploy Now</strong></a>
+
 </div>
 
 ---
 
-## 📊 Contract Information
+## 📊 Contract Details
 
-<div align="center">
-
-| **Category** | **Details** |
+| Parameter | Value |
 | :--- | :--- |
-| **Contract Name** | `SISO Token` |
-| **Symbol** | **$SISO** |
-| **Address (Sepolia)** | [`0xc8C711CDf3fD162b00F3447C6963C52aF3d44AAb`](https://sepolia.etherscan.io/address/0xc8C711CDf3fD162b00F3447C6963C52aF3d44AAb) |
-| **Total Supply** | `1,000,000,000 SISO` (1 Billion) |
-| **Initial Mint** | `250,000,000 SISO` |
-| **Burned Supply** | `250,000,000 SISO` (🔥 Permanently Removed) |
-| **Current Supply** | **750,000,000 SISO** |
-
-</div>
+| **Name** | `SISO Token` |
+| **Symbol** | `$SISO` |
+| **Total Supply** | `1,000,000,000` |
+| **Network** | Sepolia Testnet |
+| **Contract Address** | [`0xc8C711CDf3fD162b00F3447C6963C52aF3d44AAb`](https://sepolia.etherscan.io/address/0xc8C711CDf3fD162b00F3447C6963C52aF3d44AAb) |
 
 ---
 
-## 🛠 Key Features
+## 🏗 Architecture
 
-<table width="100%">
-  <tr>
-    <td width="50%" valign="top">
-      <h3>🔐 Security & Access</h3>
-      <ul>
-        <li><b>Owner-Controlled Minting:</b> Restricted access to prevent inflation attacks.</li>
-        <li><b>Pausable Transfers:</b> Circuit breaker to freeze transfers during emergencies.</li>
-        <li><b>Isolated Ownership:</b> Secure pattern separating logic from admin controls.</li>
-      </ul>
-    </td>
-    <td width="50%" valign="top">
-      <h3>⚙️ Advanced Mechanics</h3>
-      <ul>
-        <li><b>Deflationary Engine:</b> Native <code>burn</code> functionality to reduce supply.</li>
-        <li><b>Full ERC-20 Support:</b> `approve`, `transferFrom`, and `allowance` fully implemented.</li>
-        <li><b>Foundry Scripting:</b> Automated scripts for deployment and interaction.</li>
-      </ul>
-    </td>
-  </tr>
-</table>
+A clean, modular structure ensuring separation of concerns for security and testing.
 
----
-
-## 🏗️ Architecture & Structure
-
-A modular codebase optimized for clarity and testing.
-
-```bash
+```txt
 SISO-Token-ERC20/
 ├── 📂 src
-│   └── 📄 SisoToken.sol          # Main Contract (Inherits ERC20, Ownable, Pausable)
+│   └── 📜 SisoToken.sol         # Core Logic (Inherits ERC20, Ownable)
 ├── 📂 script
-│   ├── 📄 DeploySisoToken.s.sol  # Deployment to Chain
-│   ├── 📄 MintSisoToken.s.sol    # Post-deploy Minting Logic
-│   ├── 📄 BurnSisoToken.s.sol    # Supply Reduction Logic
-│   └── 📄 PauseSisoToken.s.sol   # Emergency Control Logic
+│   ├── 🚀 DeploySisoToken.s.sol # Deployment Script
+│   ├── 🪙 MintSisoToken.s.sol   # Minting Logic
+│   ├── 🔥 BurnSisoToken.s.sol   # Burning Logic
+│   └── ⏸️ PauseSisoToken.s.sol  # Security Pause Logic
 ├── 📂 test
-│   └── 🧪 SisoToken.t.sol        # Invariant & Fuzz Tests
-└── 📄 foundry.toml               # Config
+│   └── 🧪 SisoToken.t.sol       # Invariant & Fuzz Tests
+└── ⚙️ foundry.toml              # Configuration
+🛠 Key Features
+<table width="100%"> <tr> <td width="50%" valign="top"> <h3>🔐 Security First</h3> <ul> <li><b>Access Control:</b> Owner-only minting to prevent inflation.</li> <li><b>Emergency Pause:</b> Circuit breaker to freeze transfers.</li> <li><b>Pattern:</b> Isolated ownership logic.</li> </ul> </td> <td width="50%" valign="top"> <h3>⚙️ Tokenomics Engine</h3> <ul> <li><b>Deflationary:</b> Built-in burn mechanism.</li> <li><b>Standard:</b> Full approve & transferFrom support.</li> <li><b>Automation:</b> Scriptable deployment.</li> </ul> </td> </tr> </table>
+
 ⚡ Installation & Testing
-Powered by Foundry for blazing-fast compilation.
+Follow these steps to set up the environment and run the test suite.
 
 1️⃣ Clone & Install
 Bash
@@ -98,16 +61,18 @@ Bash
 git clone [https://github.com/NexTechArchitect/SISO-Token-ERC20.git](https://github.com/NexTechArchitect/SISO-Token-ERC20.git)
 cd SISO-Token-ERC20
 forge install
-2️⃣ Run Tests
-Execute the automated test suite to validate burn/mint logic.
+2️⃣ Run Automated Tests
+Execute the Foundry test suite to validate minting, burning, and pausing mechanics.
 
 Bash
 
 forge test -vvv
-3️⃣ Deploy (Sepolia)
-Set your .env file with RPC_URL and PRIVATE_KEY.
+3️⃣ Deploy to Sepolia
+Create a .env file with your SEPOLIA_RPC_URL and PRIVATE_KEY, then run:
 
 Bash
+
+source .env
 
 forge script script/DeploySisoToken.s.sol \
   --rpc-url $SEPOLIA_RPC_URL \
@@ -117,7 +82,7 @@ forge script script/DeploySisoToken.s.sol \
 <div align="center">
 
 
-<img src="https://raw.githubusercontent.com/rajput2107/rajput2107/master/Assets/Developer.gif" width="30">
+<img src="https://raw.githubusercontent.com/rajput2107/rajput2107/master/Assets/Developer.gif" width="40" />
 
 
 <b>Developed by NexTechArchitect</b>
@@ -127,5 +92,6 @@ forge script script/DeploySisoToken.s.sol \
 
 
 
-<a href="https://github.com/NexTechArchitect"> <img src="https://www.google.com/search?q=https://img.shields.io/badge/GitHub-Connect-181717%3Fstyle%3Dflat%26logo%3Dgithub%26logoColor%3Dwhite" /> </a> <a href="https://www.google.com/search?q=https://linkedin.com/in/amit-kumar-811a11277"> <img src="https://www.google.com/search?q=https://img.shields.io/badge/LinkedIn-Connect-0077B5%3Fstyle%3Dflat%26logo%3Dlinkedin%26logoColor%3Dwhite" /> </a> </div>
+<a href="https://github.com/NexTechArchitect"> <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub"/> </a> <a href="https://www.google.com/search?q=https://linkedin.com/in/amit-kumar-811a11277"> <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/> </a>
 
+</div>
