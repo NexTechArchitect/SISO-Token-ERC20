@@ -71,13 +71,13 @@ This project uses a modular folder structure for clarity and testing efficiency.
   </tr>
 </table>
 
----
-
 ## ⚡ Installation & Usage
 
 ### 1. Setup
+Clone the repository and install the Foundry dependencies.
+
 ```bash
-git clone [https://github.com/NexTechArchitect/SISO-Token-ERC20.git](https://github.com/NexTechArchitect/SISO-Token-ERC20.git)
+git clone https://github.com/NexTechArchitect/SISO-Token-ERC20.git
 cd SISO-Token-ERC20
 forge install
 2. Testing
@@ -101,7 +101,7 @@ forge script script/DeploySisoToken.s.sol \
 <div align="center">
 
 
-<img src="https://raw.githubusercontent.com/rajput2107/rajput2107/master/Assets/Developer.gif" width="40" />
+<img src="https://raw.githubusercontent.com/rajput2107/rajput2107/master/Assets/Developer.gif" width="45" />
 
 
 <b>Developed by NexTechArchitect</b>
@@ -111,4 +111,4 @@ forge script script/DeploySisoToken.s.sol \
 
 
 
-<a href="https://github.com/NexTechArchitect"> <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub"/> </a> <a href="https://www.google.com/search?q=https://linkedin.com/in/amit-kumar-811a11277"> <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/> </a> </div>
+<a href="https://github.com/NexTechArchitect"> <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub"/> </a> <a href="https://linkedin.com/in/amit-kumar-811a11277"> <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/> </a> </div>
