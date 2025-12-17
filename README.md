@@ -1,137 +1,131 @@
+<div align="center">
 
-SISO Token (ERC-20)
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=40&duration=3000&pause=1000&color=007AFF&center=true&vCenter=true&width=700&lines=SISO+Token+(ERC-20);Production-Grade+DeFi+Standard;Powered+by+Foundry+%26+OpenZeppelin" alt="Typing Effect" />
 
-SISO Token is a clean, reliable, and production-grade ERC-20 implementation built using OpenZeppelin standards and Foundry.
-It includes a full suite of utilities: deployment, minting, burning, pausing controls, allowance management, and an automated test suite that validates all core behaviors.
+  <br/>
+  
+  <img src="https://img.shields.io/badge/Network-Sepolia_Testnet-FF4500?style=for-the-badge&logo=ethereum&logoColor=white" />
+  <img src="https://img.shields.io/badge/Standard-ERC--20-363636?style=for-the-badge&logo=solidity&logoColor=white" />
+  <img src="https://img.shields.io/badge/Security-Pausable_%7C_Ownable-0052FF?style=for-the-badge&logo=security-scorecard&logoColor=white" />
+  <br/>
+  <img src="https://img.shields.io/badge/Built_With-Foundry-BE5212?style=flat-square&logo=foundry&logoColor=white" />
+  <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" />
 
-This repository serves as a practical, engineering-focused template for real-world ERC-20 token development.
+</div>
 
+---
 
+<div align="center"> 
+  <h3>🚀 Production-Ready Token Engineering</h3>
+  <p>
+    <b>SISO Token</b> is a secure, clean, and modular <b>ERC-20 implementation</b> designed for real-world reliability. <br/>
+    Built using <b>OpenZeppelin</b> standards and the <b>Foundry</b> development framework, it features a complete lifecycle management suite: <br/>
+    <i>Minting, Burning, Pausing, and Automated Testing.</i>
+  </p>
+  
+  <a href="#-contract-information">View Contract</a> • 
+  <a href="#-features">Key Features</a> • 
+  <a href="#-installation--testing">Deploy & Test</a>
+</div>
 
-Contract Information:- 
+---
 
+## 📊 Contract Information
 
-Network: Sepolia Testnet 
+<div align="center">
 
-Standard: ERC-20
+| **Category** | **Details** |
+| :--- | :--- |
+| **Contract Name** | `SISO Token` |
+| **Symbol** | **$SISO** |
+| **Address (Sepolia)** | [`0xc8C711CDf3fD162b00F3447C6963C52aF3d44AAb`](https://sepolia.etherscan.io/address/0xc8C711CDf3fD162b00F3447C6963C52aF3d44AAb) |
+| **Total Supply** | `1,000,000,000 SISO` (1 Billion) |
+| **Initial Mint** | `250,000,000 SISO` |
+| **Burned Supply** | `250,000,000 SISO` (🔥 Permanently Removed) |
+| **Current Supply** | **750,000,000 SISO** |
 
-Name: SISO Token
+</div>
 
-Symbol: SISO
+---
 
-Total Supply: 1,000,000,000 SISO
+## 🛠 Key Features
 
-Initial Minted Supply: 250,000,000 SISO
+<table width="100%">
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🔐 Security & Access</h3>
+      <ul>
+        <li><b>Owner-Controlled Minting:</b> Restricted access to prevent inflation attacks.</li>
+        <li><b>Pausable Transfers:</b> Circuit breaker to freeze transfers during emergencies.</li>
+        <li><b>Isolated Ownership:</b> Secure pattern separating logic from admin controls.</li>
+      </ul>
+    </td>
+    <td width="50%" valign="top">
+      <h3>⚙️ Advanced Mechanics</h3>
+      <ul>
+        <li><b>Deflationary Engine:</b> Native <code>burn</code> functionality to reduce supply.</li>
+        <li><b>Full ERC-20 Support:</b> `approve`, `transferFrom`, and `allowance` fully implemented.</li>
+        <li><b>Foundry Scripting:</b> Automated scripts for deployment and interaction.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
-Burned Supply: 250,000,000 SISO
+---
 
-Current Remaining Supply: 750,000,000 SISO
+## 🏗️ Architecture & Structure
 
-Contract Address:0xc8C711CDf3fD162b00F3447C6963C52aF3d44AAb
+A modular codebase optimized for clarity and testing.
 
+```bash
+SISO-Token-ERC20/
+├── 📂 src
+│   └── 📄 SisoToken.sol          # Main Contract (Inherits ERC20, Ownable, Pausable)
+├── 📂 script
+│   ├── 📄 DeploySisoToken.s.sol  # Deployment to Chain
+│   ├── 📄 MintSisoToken.s.sol    # Post-deploy Minting Logic
+│   ├── 📄 BurnSisoToken.s.sol    # Supply Reduction Logic
+│   └── 📄 PauseSisoToken.s.sol   # Emergency Control Logic
+├── 📂 test
+│   └── 🧪 SisoToken.t.sol        # Invariant & Fuzz Tests
+└── 📄 foundry.toml               # Config
+⚡ Installation & Testing
+Powered by Foundry for blazing-fast compilation.
 
-Features:-
+1️⃣ Clone & Install
+Bash
 
-The SISO Token contract includes the essential and commonly used ERC-20 extensions:
+git clone [https://github.com/NexTechArchitect/SISO-Token-ERC20.git](https://github.com/NexTechArchitect/SISO-Token-ERC20.git)
+cd SISO-Token-ERC20
+forge install
+2️⃣ Run Tests
+Execute the automated test suite to validate burn/mint logic.
 
-Owner-controlled minting so,Only owner have control in minting.
+Bash
 
-Token burning for permanently burn the Token from Supply.
+forge test -vvv
+3️⃣ Deploy (Sepolia)
+Set your .env file with RPC_URL and PRIVATE_KEY.
 
-Pausable token transfers
+Bash
 
-Standard transfer and transferFrom
-
-Full allowance and approval support
-
-Secure and isolated ownership pattern
-
-Modular project architecture
-
-Production-ready Foundry scripts
-
-
-Structure of Project:-
-
-src/
-
-    SisoToken.sol
-
-script/
-
-    DeploySisoToken.s.sol 
-    
-    MintSisoToken.s.sol
-    
-    BurnSisoToken.s.sol
-    
-    PauseSisoToken.s.sol
-    
-    UnpauseSisoToken.s.sol
-    
-    SisoAllowance.s.sol
-    
-
-test/
-
-    SisoTokenFullTest.t.sol
-
-
-Development:-
-
-This project uses Foundry for compilation, testing, deployment, and scripting.
-
-Install Foundry
-
-curl -L https://foundry.paradigm.xyz | bash
-foundryup
-
-Contract Capabilities:-
-
-The token inherits from OpenZeppelin’s audited contracts and supports:
-
-• Owner-restricted minting for controlled supply expansion.
-
-• Token burning for permanent supply reduction.
-
-• Transfer logic following the ERC-20 specification.
-
-• Allowance management enabling delegated transfers.
-
-• Pausing and unpausing of all token transfers via owner authority.
-
-• Secure ownership pattern based on OpenZeppelin’s Ownable module.
-
-The implementation avoids unnecessary abstractions so developers can trace the full token lifecycle  creation, distribution, modification, and administrative control  directly from the code.
-
-Functional Overview:-
-
-The contract exposes a full ERC-20 interface with several operational controls.
-Minting is restricted to the owner and is used to gradually increase circulating supply toward the defined one-billion token cap. Burning allows any holder to permanently destroy tokens from their balance, enabling supply side correction or deflationary logic. The contract includes pause and unpause capabilities which temporarily disable transfers and allowance-based operations, allowing safe handling during unexpected events or administrative procedures. All standard transfer and allowance behavior is fully implemented, including approve, increase/decrease allowance, and transferFrom mechanics.
-
-The scripting layer provides automated control over the entire lifecycle of the token.
-A deployment script creates the initial supply and publishes the contract.
-A minting script issues new tokens directly from the owner account.
-A burning script reduces supply from owner-held balances.
-Pause and unpause scripts allow immediate administrative intervention.
-A dedicated allowance script configures authorized spenders and sets controlled allowances for them.
-
-All core flows including direct transfers, delegated transfers, approval workflows, paused-state protections, burn operations, minting authority restrictions, and owner-only access controls are validated through a complete Foundry test suite.
-
-Run any script using this format:
-
-forge script <script-path> --rpc-url $SEPOLIA_RPC_URL --private-key $PRIVATE_KEY --broadcast
-
-This makes the workflow predictable and clean for real deployments.
+forge script script/DeploySisoToken.s.sol \
+  --rpc-url $SEPOLIA_RPC_URL \
+  --private-key $PRIVATE_KEY \
+  --broadcast \
+  --verify
+<div align="center">
 
 
-License
-
-MIT License
+<img src="https://raw.githubusercontent.com/rajput2107/rajput2107/master/Assets/Developer.gif" width="30">
 
 
-Author
+<b>Developed by NexTechArchitect</b>
 
-NEXTECHARHITECT
-(Smart Contract Developer  ERC-20 Engineering, Web3 Development, and Solidity Architecture.)
+
+<i>Building the Future of Web3</i>
+
+
+
+<a href="https://github.com/NexTechArchitect"> <img src="https://www.google.com/search?q=https://img.shields.io/badge/GitHub-Connect-181717%3Fstyle%3Dflat%26logo%3Dgithub%26logoColor%3Dwhite" /> </a> <a href="https://www.google.com/search?q=https://linkedin.com/in/amit-kumar-811a11277"> <img src="https://www.google.com/search?q=https://img.shields.io/badge/LinkedIn-Connect-0077B5%3Fstyle%3Dflat%26logo%3Dlinkedin%26logoColor%3Dwhite" /> </a> </div>
 
