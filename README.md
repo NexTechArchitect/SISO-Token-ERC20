@@ -1,20 +1,25 @@
 <div align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=500&size=30&pause=1000&color=007AFF&center=true&vCenter=true&width=600&height=100&lines=SISO+Token+(ERC-20);Production-Grade+Architecture;Secure+%7C+Scalable+%7C+Modular" alt="Typing Effect" />
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=24&pause=1000&color=007AFF&center=true&vCenter=true&width=500&height=80&lines=SISO+Token+(ERC-20);Engineered+for+Production;Secure+%7C+Scalable+%7C+Modular" alt="Typing Effect" />
+  <p>
+    <a href="https://sepolia.etherscan.io/address/0xc8C711CDf3fD162b00F3447C6963C52aF3d44AAb">
+      <img src="https://img.shields.io/badge/Network-Sepolia_Testnet-FF4500?style=for-the-badge&logo=ethereum&logoColor=white" />
+    </a>
+    <img src="https://img.shields.io/badge/Standard-ERC--20-363636?style=for-the-badge&logo=solidity&logoColor=white" />
+    <img src="https://img.shields.io/badge/Framework-Foundry-BE5212?style=for-the-badge&logo=foundry&logoColor=white" />
+  </p>
 
-<p>
-<img src="https://img.shields.io/badge/Network-Sepolia-FF4500?style=flat-square&logo=ethereum&logoColor=white" />
-<img src="https://img.shields.io/badge/Language-Solidity_0.8.20-363636?style=flat-square&logo=solidity&logoColor=white" />
-<img src="https://img.shields.io/badge/Framework-Foundry-BE5212?style=flat-square&logo=foundry&logoColor=white" />
-</p>
+  <p>
+    <b>A production-grade, paused-enabled, and burn-ready ERC-20 implementation.</b>
+  </p>
+  
+  <br/>
 
-<p>
-  <b>A production-grade, paused-enabled, and burn-ready ERC-20 implementation.</b>
-</p>
-
-<a href="#-contract-details"><strong>Contract Details</strong></a> •
-<a href="#-project-architecture"><strong>Architecture</strong></a> •
-<a href="#-installation--usage"><strong>Deploy</strong></a>
+  <p>
+    <a href="#-contract-details"><strong>📄 Contract Details</strong></a> •
+    <a href="#-project-architecture"><strong>🏗 Architecture</strong></a> •
+    <a href="#-roadmap--future-scope"><strong>🗺 Roadmap</strong></a>
+  </p>
 
 </div>
 
@@ -22,29 +27,32 @@
 
 ## 📊 Contract Details
 
-| Parameter | Value |
+<div align="center">
+
+| **Parameter** | **Value** |
 | :--- | :--- |
-| **Name** | `SISO Token` |
+| **Token Name** | `SISO Token` |
 | **Symbol** | `$SISO` |
 | **Total Supply** | `1,000,000,000` |
-| **Network** | Sepolia Testnet |
-| **Address** | [`0xc8C711CDf3fD162b00F3447C6963C52aF3d44AAb`](https://sepolia.etherscan.io/address/0xc8C711CDf3fD162b00F3447C6963C52aF3d44AAb) |
+| **Contract Address** | [`0xc8C711...4AAb`](https://sepolia.etherscan.io/address/0xc8C711CDf3fD162b00F3447C6963C52aF3d44AAb) |
+
+</div>
 
 ---
 
 ## 🏗 Project Architecture
 
-This project uses a modular folder structure for clarity and testing efficiency.
+Designed with a modular folder structure for maximum clarity and testing efficiency.
 
 * 📂 **`src/`**
-    * 📄 `SisoToken.sol` — The main smart contract (Inherits ERC20, Ownable, Pausable).
+    * 📄 `SisoToken.sol` — The core logic (Inherits ERC20, Ownable, Pausable).
 * 📂 **`script/`**
-    * 🚀 `DeploySisoToken.s.sol` — Automated deployment script.
-    * 🪙 `MintSisoToken.s.sol` — Post-deployment minting logic.
+    * 🚀 `DeploySisoToken.s.sol` — Automated blockchain deployment.
+    * 🪙 `MintSisoToken.s.sol` — Controlled minting scripts.
     * 🔥 `BurnSisoToken.s.sol` — Supply reduction logic.
-    * ⏸️ `PauseSisoToken.s.sol` — Emergency pause control.
+    * ⏸️ `PauseSisoToken.s.sol` — Emergency security controls.
 * 📂 **`test/`**
-    * 🧪 `SisoToken.t.sol` — Invariant, Fuzz, and Unit tests.
+    * 🧪 `SisoToken.t.sol` — Invariant, Fuzz, and Unit test suite.
 
 ---
 
@@ -55,41 +63,43 @@ This project uses a modular folder structure for clarity and testing efficiency.
     <td width="50%" valign="top">
       <h3>🔐 Security First</h3>
       <ul>
-        <li><b>Access Control:</b> Owner-only minting.</li>
-        <li><b>Emergency Pause:</b> Circuit breaker to freeze transfers.</li>
-        <li><b>Pattern:</b> Isolated ownership logic.</li>
+        <li><b>Strict Access Control:</b> Owner-only functions.</li>
+        <li><b>Circuit Breaker:</b> Emergency pause functionality.</li>
+        <li><b>Safety Pattern:</b> Isolated ownership logic.</li>
       </ul>
     </td>
     <td width="50%" valign="top">
       <h3>⚙️ Tokenomics Engine</h3>
       <ul>
-        <li><b>Deflationary:</b> Built-in burn mechanism.</li>
-        <li><b>Standard:</b> Full `approve` & `transferFrom` support.</li>
-        <li><b>Automation:</b> Scriptable deployment.</li>
+        <li><b>Deflationary:</b> Built-in <code>burn</code> mechanism.</li>
+        <li><b>Standardized:</b> Full `approve` & `transferFrom`.</li>
+        <li><b>Automated:</b> Scriptable deployment flow.</li>
       </ul>
     </td>
   </tr>
 </table>
-🗺️ Roadmap & Future Scope
 
-The SISO Token ecosystem is designed for scalability. Our development timeline focuses on security and expansion.
+---
 
+## 🗺 Roadmap & Future Scope
 
- ✅ Phase 1: Foundation (Completed)
-- [x] **Smart Contract Architecture:** Developed utilizing OpenZeppelin & Foundry.
-- [x] **Security Modules:** Implemented `Pausable` and `Ownable` controls.
-- [x] **Tokenomics Engine:** Integrated native Minting and Burning logic.
-- [x] **Automated Testing:** 100% coverage via Foundry Invariant tests.
+The SISO Token ecosystem is built for scalability.
 
- ⏳ Phase 2: Optimization (In Progress)
-- [ ] **Gas Optimization:** Refactoring critical logic with Yul/Assembly.
-- [ ] **Security Audit:** Third-party vulnerability assessment (Slither/Mythril).
-- [ ] **Testnet Beta:** Public stress testing on Sepolia network.
+### ✅ Phase 1: Foundation (Completed)
+- [x] **Smart Contract Architecture:** Built with OpenZeppelin & Foundry.
+- [x] **Security Modules:** Implemented `Pausable` and `Ownable`.
+- [x] **Tokenomics Engine:** Integrated native Minting and Burning.
+- [x] **Automated Testing:** 100% coverage via Invariant tests.
 
- 🔜 Phase 3: Expansion (Planned)
-- [ ] **Governance:** Transitioning ownership to a DAO structure.
-- [ ] **Staking DApp:** Launching a frontend for token staking and rewards.
-- [ ] **Mainnet Launch:** Official deployment on Ethereum Mainnet.
+### ⏳ Phase 2: Optimization (In Progress)
+- [ ] **Gas Optimization:** Yul/Assembly refactoring.
+- [ ] **Security Audit:** Automated vulnerability assessment (Slither).
+- [ ] **Testnet Beta:** Public stress testing.
+
+### 🔜 Phase 3: Expansion (Planned)
+- [ ] **Governance:** Transition to DAO structure.
+- [ ] **Staking DApp:** Frontend for rewards.
+- [ ] **Mainnet Launch:** Official Ethereum deployment.
 
 ---
 
@@ -103,9 +113,9 @@ The SISO Token ecosystem is designed for scalability. Our development timeline f
   <br/><br/>
 
   <a href="https://github.com/NexTechArchitect">
-    <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub"/>
+    <img src="https://img.shields.io/badge/GitHub-Profile-181717?style=flat&logo=github&logoColor=white" alt="GitHub"/>
   </a>
   <a href="https://linkedin.com/in/amit-kumar-811a11277">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+    <img src="https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn"/>
   </a>
- </a> </div>
+</div>
