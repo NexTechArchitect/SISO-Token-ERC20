@@ -70,45 +70,41 @@ This project uses a modular folder structure for clarity and testing efficiency.
     </td>
   </tr>
 </table>
+## 🗺️ Roadmap & Future Scope
 
-## ⚡ Installation & Usage
+The SISO Token ecosystem is designed for scalability. Our development timeline focuses on security and expansion.
 
-### 1. Setup
-Clone the repository and install the Foundry dependencies.
+### ✅ Phase 1: Foundation (Completed)
+- [x] **Smart Contract Architecture:** Developed utilizing OpenZeppelin & Foundry.
+- [x] **Security Modules:** Implemented `Pausable` and `Ownable` controls.
+- [x] **Tokenomics Engine:** Integrated native Minting and Burning logic.
+- [x] **Automated Testing:** 100% coverage via Foundry Invariant tests.
 
-```bash
-git clone https://github.com/NexTechArchitect/SISO-Token-ERC20.git
-cd SISO-Token-ERC20
-forge install
-2. Testing
-Run the comprehensive test suite to verify contract logic.
+### ⏳ Phase 2: Optimization (In Progress)
+- [ ] **Gas Optimization:** Refactoring critical logic with Yul/Assembly.
+- [ ] **Security Audit:** Third-party vulnerability assessment (Slither/Mythril).
+- [ ] **Testnet Beta:** Public stress testing on Sepolia network.
 
-Bash
+### 🔜 Phase 3: Expansion (Planned)
+- [ ] **Governance:** Transitioning ownership to a DAO structure.
+- [ ] **Staking DApp:** Launching a frontend for token staking and rewards.
+- [ ] **Mainnet Launch:** Official deployment on Ethereum Mainnet.
 
-forge test -vvv
-3. Deployment (Sepolia)
-Set your .env file with RPC_URL and PRIVATE_KEY.
+---
 
-Bash
-
-source .env
-
-forge script script/DeploySisoToken.s.sol \
-  --rpc-url $SEPOLIA_RPC_URL \
-  --private-key $PRIVATE_KEY \
-  --broadcast \
-  --verify
 <div align="center">
+  <br/>
+  <img src="https://raw.githubusercontent.com/rajput2107/rajput2107/master/Assets/Developer.gif" width="45" />
+  <br/>
+  <b>Developed by NexTechArchitect</b>
+  <br/>
+  <i>Building the Future of Web3</i>
+  <br/><br/>
 
-
-<img src="https://raw.githubusercontent.com/rajput2107/rajput2107/master/Assets/Developer.gif" width="45" />
-
-
-<b>Developed by NexTechArchitect</b>
-
-
-<i>Building the Future of Web3</i>
-
-
-
-<a href="https://github.com/NexTechArchitect"> <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub"/> </a> <a href="https://linkedin.com/in/amit-kumar-811a11277"> <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/> </a> </div>
+  <a href="https://github.com/NexTechArchitect">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub"/>
+  </a>
+  <a href="https://linkedin.com/in/amit-kumar-811a11277">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+  </a>
+</div>nkedIn"/> </a> </div>
