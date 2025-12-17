@@ -74,18 +74,19 @@ This project uses a modular folder structure for clarity and testing efficiency.
 
 The SISO Token ecosystem is designed for scalability. Our development timeline focuses on security and expansion.
 
-### ✅ Phase 1: Foundation (Completed)
+
+ ✅ Phase 1: Foundation (Completed)
 - [x] **Smart Contract Architecture:** Developed utilizing OpenZeppelin & Foundry.
 - [x] **Security Modules:** Implemented `Pausable` and `Ownable` controls.
 - [x] **Tokenomics Engine:** Integrated native Minting and Burning logic.
 - [x] **Automated Testing:** 100% coverage via Foundry Invariant tests.
 
-### ⏳ Phase 2: Optimization (In Progress)
+ ⏳ Phase 2: Optimization (In Progress)
 - [ ] **Gas Optimization:** Refactoring critical logic with Yul/Assembly.
 - [ ] **Security Audit:** Third-party vulnerability assessment (Slither/Mythril).
 - [ ] **Testnet Beta:** Public stress testing on Sepolia network.
 
-### 🔜 Phase 3: Expansion (Planned)
+ 🔜 Phase 3: Expansion (Planned)
 - [ ] **Governance:** Transitioning ownership to a DAO structure.
 - [ ] **Staking DApp:** Launching a frontend for token staking and rewards.
 - [ ] **Mainnet Launch:** Official deployment on Ethereum Mainnet.
@@ -107,4 +108,4 @@ The SISO Token ecosystem is designed for scalability. Our development timeline f
   <a href="https://linkedin.com/in/amit-kumar-811a11277">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/>
   </a>
-</div>nkedIn"/> </a> </div>
+ </a> </div>
