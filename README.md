@@ -70,7 +70,7 @@ This project uses a modular folder structure for clarity and testing efficiency.
     </td>
   </tr>
 </table>
-## 🗺️ Roadmap & Future Scope
+🗺️ Roadmap & Future Scope
 
 The SISO Token ecosystem is designed for scalability. Our development timeline focuses on security and expansion.
 
