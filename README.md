@@ -8,6 +8,7 @@
     <a href="https://sepolia.etherscan.io/address/0xc8C711CDf3fD162b00F3447C6963C52aF3d44AAb">
       <img src="https://img.shields.io/badge/Network-Sepolia_Testnet-FF4500?style=for-the-badge&logo=ethereum&logoColor=white" />
     </a>
+    <img src="https://img.shields.io/badge/Standard-ERC--20-363636?style=for-the-badge&logo=solidity&logoColor=white" />
     <img src="https://img.shields.io/badge/Framework-Foundry-BE5212?style=for-the-badge&logo=foundry&logoColor=white" />
     <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" />
   </p>
@@ -99,7 +100,7 @@ This contract implements a strict **Permission Matrix** to ensure security while
 | :--- | :---: | :---: | :--- |
 | **`transfer`** | ✅ | ✅ | Standard ERC-20 transfers. |
 | **`approve`** | ✅ | ✅ | Grant spending allowance to other addresses. |
-| **`burn`** | ✅ | ✅ | Destroy own tokens to reduce supply. |
+| **`burn`** | ❌ | ✅ | **Restricted:** Only Owner can destroy tokens. |
 | **`mint`** | ❌ | ✅ | **Restricted:** Create new tokens (Owner Only). |
 | **`pause / unpause`** | ❌ | ✅ | **Emergency:** Freeze all transfers (Owner Only). |
 
@@ -128,13 +129,18 @@ graph LR
 ---
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/rajput2107/rajput2107/master/Assets/Developer.gif" width="50" />
 
 
 
 
 
-<code>Protocol Engineered by NexTechArchitect</code>
+<b>Protocol Engineered by NexTechArchitect</b>
+
+
+
+
+
+<i>Building the Future of Web3</i>
 
 
 
