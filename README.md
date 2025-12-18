@@ -8,7 +8,6 @@
     <a href="https://sepolia.etherscan.io/address/0xc8C711CDf3fD162b00F3447C6963C52aF3d44AAb">
       <img src="https://img.shields.io/badge/Network-Sepolia_Testnet-FF4500?style=for-the-badge&logo=ethereum&logoColor=white" />
     </a>
-    <img src="https://img.shields.io/badge/Standard-ERC--20-363636?style=for-the-badge&logo=solidity&logoColor=white" />
     <img src="https://img.shields.io/badge/Framework-Foundry-BE5212?style=for-the-badge&logo=foundry&logoColor=white" />
     <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" />
   </p>
@@ -25,7 +24,7 @@
       <td align="center"><a href="#-contract-details"><strong>📄 Details</strong></a></td>
       <td align="center"><a href="#-project-architecture"><strong>🏗 Architecture</strong></a></td>
       <td align="center"><a href="#-key-features"><strong>💎 Features</strong></a></td>
-      <td align="center"><a href="#-roadmap--future-scope"><strong>🗺 Roadmap</strong></a></td>
+      <td align="center"><a href="#-mechanics--access-control"><strong>⚙️ Mechanics</strong></a></td>
     </tr>
   </table>
 
@@ -90,46 +89,72 @@ Designed with a modular folder structure for maximum clarity and testing efficie
 
 ---
 
-## 🗺 Roadmap & Future Scope
+## ⚙️ Mechanics & Access Control
 
-Since **$SISO** is a testnet-native asset, our roadmap focuses on **DevOps, Tooling, and Integration** rather than a financial mainnet launch.
+This contract implements a strict **Permission Matrix** to ensure security while allowing open participation in tokenomics.
 
-### ✅ Phase 1: Foundation (Completed)
-- [x] **Smart Contract Architecture:** Built with OpenZeppelin & Foundry.
-- [x] **Security Modules:** Implemented `Pausable` and `Ownable`.
-- [x] **Tokenomics Engine:** Integrated native Minting and Burning.
-- [x] **Automated Testing:** 100% coverage via Invariant tests.
+### 🛡️ Administrative Roles
 
-### ⏳ Phase 2: Optimization (In Progress)
-- [ ] **Gas Optimization:** Refactoring critical logic with Yul/Assembly.
-- [ ] **Security Audit:** Automated vulnerability assessment (Slither/Aderyn).
-- [ ] **Verification Script:** Auto-verify source code on Etherscan via Foundry.
+| Function | User | Owner / Admin | Description |
+| :--- | :---: | :---: | :--- |
+| **`transfer`** | ✅ | ✅ | Standard ERC-20 transfers. |
+| **`approve`** | ✅ | ✅ | Grant spending allowance to other addresses. |
+| **`burn`** | ✅ | ✅ | Destroy own tokens to reduce supply. |
+| **`mint`** | ❌ | ✅ | **Restricted:** Create new tokens (Owner Only). |
+| **`pause / unpause`** | ❌ | ✅ | **Emergency:** Freeze all transfers (Owner Only). |
 
-### 🔜 Phase 3: Expansion (Planned)
-- [ ] **DApp Interface:** Build a Next.js frontend for users to Mint/Burn interactively.
-- [ ] **DEX Integration:** Create a Uniswap V2 Liquidity Pool on Sepolia.
-- [ ] **Multi-Chain Bridge:** Deploy to **Base Sepolia** and **Arbitrum Sepolia** using LayerZero or CCIP.
+### 🩸 Circuit Breaker Logic (Pausable)
+
+We implement the `Pausable` module to protect the ecosystem during unforeseen events.
+
+```mermaid
+graph LR
+    Call[User calls Transfer]
+    Check{Is Contract Paused?}
+    Status_Active[Active State]
+    Status_Paused[Paused State]
+    
+    Call --> Check
+    Check -- No --> Status_Active
+    Status_Active --> Execute[✅ Execute Transfer]
+    
+    Check -- Yes --> Status_Paused
+    Status_Paused --> Revert[❌ Revert Transaction]
+
+```
+
+> **Note:** When paused, only `view` functions remain accessible. State-changing actions (Transfer, Mint, Burn) are blocked to prevent exploitation.
 
 ---
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/rajput2107/rajput2107/master/Assets/Developer.gif" width="50" />
-  <br/>
-  <code>Protocol Engineered by NexTechArchitect</code>
-  <br/><br/>
-  
-  <a href="https://github.com/NexTechArchitect">
-    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
-  </a>
-  &nbsp;&nbsp;
-  <a href="https://linkedin.com/in/amit-kumar-811a11277">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
-  </a>
-  &nbsp;&nbsp;
-  <a href="https://x.com/itZ_AmiT0">
-    <img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white" alt="X"/>
-  </a>
+<img src="https://raw.githubusercontent.com/rajput2107/rajput2107/master/Assets/Developer.gif" width="50" />
+
+
+
+
+
+<code>Protocol Engineered by NexTechArchitect</code>
+
+
+
+
+
+
+<a href="https://github.com/NexTechArchitect">
+<img src="https://www.google.com/search?q=https://img.shields.io/badge/GitHub-181717%3Fstyle%3Dfor-the-badge%26logo%3Dgithub%26logoColor%3Dwhite" alt="GitHub"/>
+</a>
+&nbsp;&nbsp;
+<a href="https://linkedin.com/in/amit-kumar-811a11277">
+<img src="https://www.google.com/search?q=https://img.shields.io/badge/LinkedIn-0077B5%3Fstyle%3Dfor-the-badge%26logo%3Dlinkedin%26logoColor%3Dwhite" alt="LinkedIn"/>
+</a>
+&nbsp;&nbsp;
+<a href="https://x.com/itZ_AmiT0">
+<img src="https://www.google.com/search?q=https://img.shields.io/badge/X-000000%3Fstyle%3Dfor-the-badge%26logo%3Dx%26logoColor%3Dwhite" alt="X"/>
+</a>
 
 </div>
+
+```
 
 ```
