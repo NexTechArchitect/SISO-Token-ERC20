@@ -1,47 +1,58 @@
 
 <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=28&pause=1000&color=007AFF&center=true&vCenter=true&width=1000&height=100&lines=SISO+Token+(ERC-20);Engineered+for+Testnet+DevOps;Secure+%7C+Pausable+%7C+Deflationary;Foundry+Development+Framework" alt="Typing Effect" />
 
-  <br/>
+  <br />
+  <br />
+
+  <img src="https://img.icons8.com/ios-filled/100/9d4edd/token.png" alt="SISO Token Logo" />
+
+  <h1 style="font-size: 3rem; margin-bottom: 0;">SISO Token Standard</h1>
+
+  <p style="font-size: 1.1rem; color: #b298dc; max-width: 600px;">
+    <strong>A production-grade, DevOps-ready ERC-20 Primitive.</strong><br/>
+    Featuring Role-Based Access Control, deflationary mechanics, and emergency circuit breakers.
+  </p>
 
   <p>
     <a href="https://sepolia.etherscan.io/address/0xc8C711CDf3fD162b00F3447C6963C52aF3d44AAb">
-      <img src="https://img.shields.io/badge/Network-Sepolia_Testnet-FF4500?style=for-the-badge&logo=ethereum&logoColor=white" />
+      <img src="https://img.shields.io/badge/Network-Sepolia_Testnet-2e2e2e?style=for-the-badge&logo=ethereum&logoColor=white" />
     </a>
-    <img src="https://img.shields.io/badge/Standard-ERC--20-363636?style=for-the-badge&logo=solidity&logoColor=white" />
+    &nbsp;
+    <a href="https://github.com/NexTechArchitect/SISO-Token-ERC20">
+      <img src="https://img.shields.io/badge/Standard-ERC--20-9d4edd?style=for-the-badge&logo=solidity&logoColor=white" />
+    </a>
+    &nbsp;
+    <a href="https://github.com/NexTechArchitect/SISO-Token-ERC20">
+      <img src="https://img.shields.io/badge/Security-Pausable-2e2e2e?style=for-the-badge&logo=security-scorecard&logoColor=white" />
+    </a>
   </p>
 
-  <p width="90%">
-    <b>A production-grade, access-controlled, and burn-ready ERC-20 implementation.</b><br/>
-    Designed as a robust primitive for testing DeFi integrations, staking mechanics, and automated deployments.
-  </p>
-  
-  <br/>
-
-  <table>
-    <tr>
-      <td align="center"><a href="#-contract-details"><strong>📄 Details</strong></a></td>
-      <td align="center"><a href="#-project-architecture"><strong>🏗 Architecture</strong></a></td>
-      <td align="center"><a href="#-key-features"><strong>💎 Features</strong></a></td>
-      <td align="center"><a href="#-mechanics--access-control"><strong>⚙️ Mechanics</strong></a></td>
-    </tr>
-  </table>
+  <br />
 
 </div>
 
 ---
 
-## 📊 Contract Details
+## 📑 Table of Contents
+
+- [📊 Contract Specifications](#-contract-specifications)
+- [🏗 Project Architecture](#-project-architecture)
+- [🛡 Security & Features](#-security--features)
+- [⚙️ Access Control Matrix](#%EF%B8%8F-access-control-matrix)
+
+---
+
+## 📊 Contract Specifications
 
 <div align="center">
 
-| **Parameter** | **Value** |
+| **Parameter** | **Configuration Value** |
 | :--- | :--- |
 | **Token Name** | `SISO Token` |
-| **Symbol** | `$SISO` |
-| **Total Supply** | `1,000,000,000` |
-| **Decimals** | `18` |
-| **Verified Contract** | [`0xc8C711...4AAb`](https://sepolia.etherscan.io/address/0xc8C711CDf3fD162b00F3447C6963C52aF3d44AAb) |
+| **Ticker Symbol** | `$SISO` |
+| **Total Supply** | `1,000,000,000` (1 Billion) |
+| **Precision** | `18 Decimals` (Standard) |
+| **Explorer** | [🔎 View on Sepolia Etherscan](https://sepolia.etherscan.io/address/0xc8C711CDf3fD162b00F3447C6963C52aF3d44AAb) |
 
 </div>
 
@@ -49,38 +60,38 @@
 
 ## 🏗 Project Architecture
 
-Designed with a modular folder structure for maximum clarity and testing efficiency.
+Designed with a modular folder structure for maximum clarity and testing efficiency using the **Foundry** framework.
 
 * 📂 **`src/`**
     * 📄 `SisoToken.sol` — The core logic (Inherits ERC20, Ownable, Pausable).
 * 📂 **`script/`**
-    * 🚀 `DeploySisoToken.s.sol` — Automated blockchain deployment.
+    * 🚀 `DeploySisoToken.s.sol` — Automated blockchain deployment via DevOps pipelines.
     * 🪙 `MintSisoToken.s.sol` — Admin-controlled minting scripts.
-    * 🔥 `BurnSisoToken.s.sol` — Supply reduction logic.
+    * 🔥 `BurnSisoToken.s.sol` — Supply reduction & deflationary logic.
     * ⏸️ `PauseSisoToken.s.sol` — Emergency circuit breaker controls.
 * 📂 **`test/`**
     * 🧪 `SisoToken.t.sol` — Invariant, Fuzz, and Unit test suite.
 
 ---
 
-## 💎 Key Features
+## 🛡 Security & Features
 
 <table width="100%">
   <tr>
     <td width="50%" valign="top">
-      <h3>🔐 Security First</h3>
+      <h3>🔐 Attack Surface Reduction</h3>
       <ul>
-        <li><b>Strict Access Control:</b> Owner-only minting and admin functions.</li>
-        <li><b>Circuit Breaker:</b> Emergency <code>pause()</code> functionality to freeze transfers during incidents.</li>
-        <li><b>Pattern:</b> Isolated ownership logic via OpenZeppelin.</li>
+        <li><b>RBAC (Role-Based Access Control):</b> Strictly enforces Owner-only minting and admin functions.</li>
+        <li><b>Circuit Breaker:</b> Emergency <code>pause()</code> functionality to freeze all token transfers during security incidents.</li>
+        <li><b>Audit Ready:</b> Utilizes battle-tested OpenZeppelin libraries to minimize logic errors.</li>
       </ul>
     </td>
     <td width="50%" valign="top">
       <h3>⚙️ Tokenomics Engine</h3>
       <ul>
-        <li><b>Deflationary:</b> Native <code>burn</code> mechanism to reduce total supply.</li>
-        <li><b>Standardized:</b> Full support for <code>approve</code> & <code>transferFrom</code> workflows.</li>
-        <li><b>Automated:</b> Scriptable deployment flow for CI/CD pipelines.</li>
+        <li><b>Deflationary Capable:</b> Native <code>burn</code> mechanism allows the owner to permanently reduce total supply.</li>
+        <li><b>DeFi Compatible:</b> Full support for <code>approve</code>, <code>transferFrom</code>, and <code>increaseAllowance</code> workflows.</li>
+        <li><b>CI/CD Ready:</b> Scriptable deployment flow for automated testing pipelines.</li>
       </ul>
     </td>
   </tr>
@@ -88,21 +99,21 @@ Designed with a modular folder structure for maximum clarity and testing efficie
 
 ---
 
-## ⚙️ Mechanics & Access Control
+## ⚙️ Access Control Matrix
 
 This contract implements a strict **Permission Matrix** to ensure security while allowing open participation in tokenomics.
 
 ### 🛡️ Administrative Roles
 
-| Function | User | Owner / Admin | Description |
+| Function | User (Public) | Owner (Admin) | Description |
 | :--- | :---: | :---: | :--- |
 | **`transfer`** | ✅ | ✅ | Standard ERC-20 transfers. |
-| **`approve`** | ✅ | ✅ | Grant spending allowance to other addresses. |
-| **`burn`** | ❌ | ✅ | **Restricted:** Only Owner can destroy tokens. |
-| **`mint`** | ❌ | ✅ | **Restricted:** Create new tokens (Owner Only). |
-| **`pause / unpause`** | ❌ | ✅ | **Emergency:** Freeze all transfers (Owner Only). |
+| **`approve`** | ✅ | ✅ | Grant spending allowance to DeFi protocols. |
+| **`burn`** | ❌ | ✅ | **Restricted:** Only Admin can destroy tokens. |
+| **`mint`** | ❌ | ✅ | **Restricted:** Only Admin can print new supply. |
+| **`pause`** | ❌ | ✅ | **Emergency:** Freezes the entire contract. |
 
-### 🩸 Circuit Breaker Logic (Pausable)
+### 🩸 Circuit Breaker Logic
 
 We implement the `Pausable` module to protect the ecosystem during unforeseen events.
 
@@ -119,10 +130,13 @@ graph LR
     
     Check -- Yes --> Status_Paused
     Status_Paused --> Revert[❌ Revert Transaction]
+    
+    style Status_Active fill:#1a1a1a,stroke:#b298dc
+    style Status_Paused fill:#2d1b4e,stroke:#9d4edd,stroke-width:2px
 
 ```
 
-> **Note:** When paused, only `view` functions remain accessible. State-changing actions (Transfer, Mint, Burn) are blocked to prevent exploitation.
+> **Note:** When paused, only `view` functions remain accessible. State-changing actions (Transfer, Mint, Burn) are strictly blocked.
 
 ---
 
@@ -132,33 +146,23 @@ graph LR
 
 
 
-<img src="https://raw.githubusercontent.com/rajput2107/rajput2107/master/Assets/Developer.gif" width="60" />
+<b>Engineered by NEXTECHARHITECT</b>
+
+
+
+
+<i>Smart Contract Developer · Solidity · Foundry · Web3 Engineering</i>
 
 
 
 
 
-<h3>Engineered by NexTechArchitect</h3>
-<p><i>Smart Contract Development • Web3 Engineering • Solidity</i></p>
 
 
-
-
-<a href="https://github.com/NexTechArchitect">
-<img src="https://skillicons.dev/icons?i=github" height="40" />
-</a>
-&nbsp;&nbsp;
-<a href="https://linkedin.com/in/amit-kumar-811a11277">
-<img src="https://skillicons.dev/icons?i=linkedin" height="40" />
-</a>
-&nbsp;&nbsp;
-<a href="https://x.com/itZ_AmiT0">
-<img src="https://skillicons.dev/icons?i=twitter" height="40" />
-</a>
-
+<a href="https://github.com/NexTechArchitect">GitHub</a> •
+<a href="https://www.google.com/search?q=https://twitter.com/NexTechArchitect">Twitter</a>
 </div>
 
 ```
 
 ```
-
