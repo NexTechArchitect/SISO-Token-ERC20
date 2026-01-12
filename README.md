@@ -2,9 +2,6 @@
 <div align="center">
 
   <br />
-  <br />
-
-  <img src="https://img.icons8.com/ios-filled/100/9d4edd/token.png" alt="SISO Token Logo" />
 
   <h1 style="font-size: 3rem; margin-bottom: 0;">SISO Token Standard</h1>
 
